@@ -1,0 +1,241 @@
+
+/*********************/
+/*      LAYOUT       */
+/*********************/
+
+body{
+    margin-left:6em;
+    margin-right:6em;
+}
+
+
+h1, h2, p{
+    font-family: 'NeueHaasGroteskText W01', sans-serif;
+    border-bottom: 0px !important; /*overide dashboard.css rule*/
+}
+
+.container-fluid{
+    padding-top:5em;
+}
+.col-md-8{
+    float:left;
+    position:relative;
+    display:inline;
+}
+
+.col-md-4{
+   /* float:left;*/
+    position:relative;
+    display:inline;
+}
+
+.col-md-12{
+    display:block;
+    clear:both;
+}
+
+.border-row{
+    border-top: 1px solid #eee;
+    padding-top:2em;
+}
+
+.card{
+    background-color: transparent;
+    border: none;
+}
+
+
+
+
+#article_author > span { display: inline-block; }
+
+/* appending the commas */
+#article_author > span:after { content: ", " }
+
+/* removing it for the last index */
+#article_author > span:last-of-type:after { content: "" }
+
+/*********************/
+/*        MAP        */
+/*********************/
+
+#text{
+    width: 35%
+}
+/*********************/
+/*        MAP        */
+/*********************/
+
+
+.tooltip2{
+
+    width:auto;
+    opacity:1 !important;
+    background-color:black !important;
+    pointer-events: none;
+    cursor: pointer;
+}
+
+.swatch{
+    width:10px;
+    height:10px;
+}
+
+.label{
+    font: 12px sans-serif;
+}
+
+.countries{
+    stroke: #2A2C39;
+    stroke-width: 1;
+    stroke-opacity: 0.3;
+    cursor: pointer;
+}
+
+/*********************/
+/*     PIE CHART     */
+/*********************/
+
+#piechart polyline{
+
+    stroke: black;
+    stroke-width: 2px;
+    fill: none;
+    opacity:0;
+}
+
+#piechart .labels{
+    fill:none;
+}
+
+polyline{
+
+    stroke: black; !important;
+    stroke-width: 1px; !important;
+    fill: black; !important;
+    opacity:1; !important;
+}
+
+.labels{
+    fill:black;
+}
+
+.arc{
+    opacity:0.8;
+    cursor: pointer;
+}
+#piechart .pie-labels{
+    font-size:10px;
+
+}
+
+/*********************/
+/*     BAR CHART     */
+/*********************/
+
+
+
+
+.tooltip{
+
+    width:auto;
+    opacity:1 !important;
+    background-color:black !important;
+    pointer-events: none;
+
+
+
+}
+
+
+
+
+.col-md-6{
+    float:left;
+}
+
+.chart-labels .table-text{
+    font-size: 0.8em;
+    font-family: '"Segoe UI", Roboto, "Helvetica Neue", Arial'
+}
+
+.chart-titles{
+    font-size: 1.2em;
+
+}
+
+
+/*********************/
+/*       TABLE       */
+/*********************/
+
+td, th{
+    text-align: center;
+}
+
+.table{
+    width:100%;
+    margin:2em;
+}
+
+th{
+    border: 0px !important;  /*overide dashboard.css rule*/
+
+}
+
+
+/************************/
+/*   Partner Stats     */
+/************************/
+
+
+#partner_stats li{
+    list-style-type: none;
+    padding-bottom:0.5em;
+}
+
+.col-md-6{
+    float:left;
+    margin-top:2em;
+}
+
+/************************/
+/*   Loading Screen     */
+/************************/
+
+.spinner_cover{
+    width: 100%;
+    height: 10000px;
+    background-color: #fff;
+    z-index: 1;
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    margin: 100px auto;
+    background-color: #333;
+
+    border-radius: 100%;
+    -webkit-animation: sk-scaleout 1.0s infinite ease-in-out;
+    animation: sk-scaleout 1.0s infinite ease-in-out;
+}
+
+@-webkit-keyframes sk-scaleout {
+    0% { -webkit-transform: scale(0) }
+    100% {
+        -webkit-transform: scale(1.0);
+        opacity: 0;
+    }
+}
+
+@keyframes sk-scaleout {
+    0% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    } 100% {
+          -webkit-transform: scale(1.0);
+          transform: scale(1.0);
+          opacity: 0;
+      }
+}

@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Journal metrics </title>
+
+
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<link href="css/dashboard.css" rel="stylesheet">
+<link rel="stylesheet" href="css/bootstrap-grid.css">
+<link rel="stylesheet" href="css/bootstrap-reboot.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/jquery-ui.min.css">
+<link rel="stylesheet" href="css/jquery-ui.structure.min.css">
+<link rel="stylesheet" href="css/jquery-ui.theme.min.css">
+<script>
+<!-- altmetric JS -->
+!function(e,t,n){var d="createElement",m="getElementsByTagName",c="setAttribute",n=document.getElementById(e);return n&&n.parentNode&&n.parentNode.removeChild(n),n=document[d+"NS"]&&document.documentElement.namespaceURI,n=n?document[d+"NS"](n,"script"):document[d]("script"),n[c]("id",e),n[c]("src",t),(document[m]("head")[0]||document[m]("body")[0]).appendChild(n),n=new Image,void n[c]("src","https://d1uo4w7k31k5mn.cloudfront.net/donut/0.png")}("altmetric-embed-js","https://d1bxh8uas1mnw7.cloudfront.net/assets/altmetric_badges-6b74dfff5c7f701b334f3e44e411f88f.js");
+</script>
+
+</head>
+<body>
+
+<!-- nav -->
+<nav class="navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse">
+<button class="navbar-toggler navbar-toggler-right hidden-lg-up" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+<span class="navbar-brand" href="#">Article Metrics</span>
+
+<div class="collapse navbar-collapse" id="navbarsExampleDefault">
+<ul class="navbar-nav mr-auto">
+<li class="nav-item active">
+<a class="nav-link" href="#">About <span class="sr-only">(current)</span></a>
+</li>
+<li class="nav-item">
+<span class="nav-link" href="#" id="back_button">Back to journal homepage</span>
+</li>
+</ul>
+
+</div>
+</nav>
+
+<div class="spinner"></div>
+
+<div class="spinner_cover"></div>
+
+<div class="container-fluid" id="container">
+
+<!-- Page header -->
+<div class="row">
+<div class="col-md-8">
+<div class="page-header">
+<h4><i>Leonardo</i></h4>
+<p>12 month Content Usage report</p>
+</div>
+</div>
+</div>
+
+<br/>
+
+
+
+
+	<div class="row" style="text-align:center;">
+
+
+		<div class="col-md-4" id="absTotal" style="padding:2em;">
+			<h5>Total Abstract Views</h5>
+
+		</div> <!-- close abdTotal -->
+
+		<div class="col-md-4" id="pdfTotal"  style="padding:2em;">
+			<h5>Total Full-text PDF Downloads</h5>
+
+		</div> <!-- close pdfTotal -->
+
+		<div class="col-md-4" id="htmlTotal"  style="padding:2em;">
+			<h5>Total Full-text HTML Downloads</h5>
+
+		</div><!-- close htmlTotal -->
+
+		<!--<div class="col-md-3" id="epubTotal"  style="padding:2em;">
+			<h5>Total EPUB Downloads</h5>
+
+		</div>--><!-- close epubTotal -->
+
+	</div><!-- close totals row -->
+
+	<div class="row border-row">
+		<div class="col-md-12" id="what">
+<svg style="width:100% !important; height:400px;" id="barchart_month"></svg>
+		</div>
+	</div><!-- close barchart row-->
+
+
+	<div class="row">
+	<div class="col-md-10" id="table">
+	</div>
+	</div><!-- close TABLE row-->
+
+
+
+
+
+
+
+	<div class="row border-row">
+
+		<h5>Downloads by Country</h5>
+		<div class="col-md-12">
+			<svg style="width:100% !important; height:400px;" id="mapvis"></svg>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-5" id="na" style="margin-left: -80px;">
+			<table class="table">
+				<thead>
+				<tr>
+					<th scope="col">#</th>
+					<th scope="col">Country</th>
+					<th scope="col">Downloads</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+					<th scope="row">1</th>
+					<td>USA</td>
+					<td>23377</td>
+
+				</tr>
+				<tr>
+					<th scope="row">2</th>
+					<td>United Kingdom</td>
+					<td>9388</td>
+				</tr>
+				<tr>
+					<th scope="row">3</th>
+					<td>Germany</td>
+					<td>5691</td>
+				</tr>
+				<tr>
+					<th scope="row">4</th>
+					<td>Australia</td>
+					<td>3442</td>
+				</tr>
+				<tr>
+					<th scope="row">5</th>
+					<td>Portugal</td>
+					<td>3142</td>
+
+				</tr>
+
+				</tbody>
+			</table>
+		</div>
+		<div class="col-md-2" id="na" style="margin-left: 0px;"></div>
+
+		<div class="col-md-5" id="na" style="margin-left: -80px;">
+			<table class="table">
+				<thead>
+				<tr>
+					<th scope="col">#</th>
+					<th scope="col">Country</th>
+					<th scope="col">Downloads</th>
+				</tr>
+				</thead>
+				<tbody>
+
+				<tr>
+					<th scope="row">6</th>
+					<td>Canada</td>
+					<td>2937</td>
+
+				</tr>
+				<tr>
+					<th scope="row">7</th>
+					<td>China</td>
+					<td>2312</td>
+				</tr>
+				<tr>
+					<th scope="row">8</th>
+					<td>India</td>
+					<td>1896</td>
+				</tr>
+				<tr>
+					<th scope="row">9</th>
+					<td>France</td>
+					<td>1875</td>
+				</tr>
+				<tr>
+					<th scope="row">10</th>
+					<td>South Korea</td>
+					<td>1607</td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+
+	</div>
+
+
+<!-- GOOGLE ANALYTICS -->
+
+	<br/>
+	<br/>
+	<br/>
+	<div class="row border-row">
+
+		<h5>The top 10 referers to <i>Leonardo</i> homepage</i></h5>
+
+	</div>
+	<div class="row">
+		<div class="col-md-5" id="na" style="margin-left: -80px;">
+			<table class="table">
+				<thead>
+				<tr>
+					<th scope="col">#</th>
+					<th scope="col">Source / Medium</th>
+					<th scope="col">Sessions</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+					<th scope="row">1</th>
+					<td>google</td>
+					<td>4,214</td>
+
+				</tr>
+				<tr>
+					<th scope="row">2</th>
+					<td>AdWords</td>
+					<td>6,107</td>
+				</tr>
+				<tr>
+					<th scope="row">3</th>
+					<td>Facebook</td>
+					<td>2,445</td>
+				</tr>
+				<tr>
+					<th scope="row">4</th>
+					<td>(Direct)</td>
+					<td>1,558</td>
+				</tr>
+				<tr>
+					<th scope="row">5</th>
+					<td>Twitter</td>
+					<td>502</td>
+
+				</tr>
+
+				</tbody>
+			</table>
+		</div>
+		<div class="col-md-2" id="na" style="margin-left: 0px;"></div>
+
+		<div class="col-md-5" id="na" style="margin-left: -80px;">
+			<table class="table">
+				<thead>
+				<tr>
+					<th scope="col">#</th>
+					<th scope="col">Source / Medium</th>
+					<th scope="col">Sessions</th>
+				</tr>
+				</thead>
+				<tbody>
+
+				<tr>
+					<th scope="row">6</th>
+					<td>mitpress.mit.edu</td>
+					<td>160</td>
+
+				</tr>
+				<tr>
+					<th scope="row">7</th>
+					<td>CAA News</td>
+					<td>73</td>
+				</tr>
+				<tr>
+					<th scope="row">8</th>
+					<td>email</td>
+					<td>73</td>
+				</tr>
+				<tr>
+					<th scope="row">9</th>
+					<td>mc</td>
+					<td>66</td>
+				</tr>
+				<tr>
+					<th scope="row">10</th>
+					<td>Ssciart</td>
+					<td>66</td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+
+	</div>
+
+
+	<div class="row border-row" id="partner_stats">
+		<div class="col-md-12">
+		<h5>Partner Usage Statistics</h5>
+		<div class="col-md-6" >
+			<p>
+				<b>Project Muse</b>
+			</p>
+			<ul>
+				<li id="muse_total"></li>
+				<li id="muse_pdf"></li>
+				<li id="muse_abstract"></li>
+			</ul>
+
+		</div>
+		<div class="col-md-6">
+			<p>
+				<b>JSTOR</b>
+			</p>
+			<ul>
+				<li id="jstor_total"></li>
+				<li id="jstor_pdf"></li>
+				<li id="jstor_abstract"></li>
+			</ul>
+
+		</div>
+		</div>
+	<!--	<div class="col-sm">
+			<h5>
+				EBSCO
+			</h5>
+			<p id="ebsco">
+			</p>
+			<div id="ebsco_pie"></div>
+		</div>
+	</div>-->
+
+
+
+
+
+
+
+</div>
+
+
+
+</body>
+
+
+<script src="js/scripts.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/d3.v4.min.js"></script>
+
+<script src="js/d3-tip.js"></script>
+
+<script
+src="https://code.jquery.com/jquery-3.3.1.min.js"
+integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+crossorigin="anonymous"></script>    <script src="js/d3-scale-chromatic.v1.min.js"></script>
+<script src="js/d3-geo-projection.v2.min.js"></script>
+<script src="js/d3-legend.js"></script>
+<script src="http://d3js.org/colorbrewer.v1.min.js"></script>
+<script src="js/badge.js"></script>
+
+
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="js/mdb.min.js"></script>
+<script src="js/jquery.bootpag.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<!-- Chars -->
+<script src="js/barchart.js"></script>
+<script src="js/table.js"></script>
+<script src="js/mapVis.js"></script>
+<script src="js/MJE.js"></script>
+<script src="js/piechart.js"></script>
+<script src="js/run.js"></script>
+
+</body>
+</html>
